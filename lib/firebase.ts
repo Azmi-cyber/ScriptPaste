@@ -1,20 +1,10 @@
-
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
-
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET!,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID!,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
+  apiKey: "AIzaSyCahDU6RL3pYtrbXP7LPIkaItR-IPt12_w",
+  authDomain: "scriptpaste-91c9c.firebaseapp.com",
+  projectId: "scriptpaste-91c9c",
+  storageBucket: "scriptpaste-91c9c.firebasestorage.app",
+  messagingSenderId: "50579021180",
+  appId: "1:50579021180:web:165b255187da3f4f89d8f9",
+  measurementId: "G-V5ES6JYZHD"
 };
-
-const app = initializeApp(firebaseConfig);
-
-export const auth = getAuth(app);
-export const db = getFirestore(app);
-export const storage = getStorage(app);
