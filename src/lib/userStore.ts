@@ -9,7 +9,9 @@ export interface UserProfile {
   updatedAt: string;
 }
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+// Use /tmp for ephemeral storage on Railway (data persists during container lifetime)
+// For persistent storage, use Railway's database or persistent disk
+const DATA_DIR = process.env.RAILWAY_VOLUME_MOUNT_PATH || process.env.DATA_DIR || path.join(process.cwd(), 'data');
 const USER_PROFILES_FILE = path.join(DATA_DIR, 'userProfiles.json');
 
 function ensureDataDir() {
